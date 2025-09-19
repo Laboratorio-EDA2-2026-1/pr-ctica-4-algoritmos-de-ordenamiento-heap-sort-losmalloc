@@ -76,5 +76,4 @@ void heap_sort(int a[], int n) {
 
         max_heapify(a,i,0);
      }
-    }
 }
