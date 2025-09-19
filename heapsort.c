@@ -17,6 +17,7 @@ void max_heapify(int a[], int n, int i);
 void build_max_heap(int a[], int n);
 void heap_sort(int a[], int n);
 
+
 /* MAIN de prueba mínima */
 int main(void) {
     int n; if (scanf("%d", &n) != 1 || n <= 0) return 0;
@@ -30,7 +31,7 @@ int main(void) {
         if (i) putchar(' ');
         printf("%d", a[i]);
     }
-    putchar('\n');
+    putchar(' ');
 
     free(a);
     return 0;
@@ -56,7 +57,7 @@ void max_heapify(int a[], int n, int i) {
     if (largest != i) {
         int temp = a[i];
         a[i] = a[largest];
-        a[largest]=temp;
+        a[largest] = temp;
 
         //Recursivamente aplicamos max_heapify
         max_heapify(a, n, largest);
@@ -77,7 +78,7 @@ void heap_sort(int a[], int n) {
      }
 
      for(int i=n-1; i>0; i--){
-        swap(&a[0], &a[i]);
+        (&a[0], &a[i]);
 
         max_heapify(a,i,0);
      }
