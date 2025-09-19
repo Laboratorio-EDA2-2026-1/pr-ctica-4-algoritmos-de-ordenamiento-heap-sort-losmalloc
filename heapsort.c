@@ -54,7 +54,10 @@ void max_heapify(int a[], int n, int i) {
 
     //Si el hijo izquierdo es mas grande que la raíz
     if(left < n && a[left] > a[largest])
-        largest = right;
+        largest = left;
+        
+    if (right < n && a[right] > a[largest])
+    largest = right;
 
     //Si el hijo derecho es más grande que el màs grande hasta ahora
     if (largest != i) {
@@ -69,7 +72,7 @@ void max_heapify(int a[], int n, int i) {
 
 void build_max_heap(int a[], int n) {
     // El último nodo que tiene hijos está en (n/2 - 1)
-    for (int i = n / 2 - 1; i > 0; i--){
+    for (int i = n / 2 - 1; i >= 0; i--){
         max_heapify(a,n,i);
     }
 }
