@@ -37,7 +37,7 @@ int main(void) {
     return 0;
 }
 
-//IMPLEMENTAR AQUI 
+/*IMPLEMENTAR AQUI*/ 
 void max_heapify(int a[], inr n, int i) {
     int largest = i; //Incializamos el mayor como la raiz 
     int left = 2 * i +1; // Hijo izquierdo 
@@ -59,7 +59,10 @@ void max_heapify(int a[], inr n, int i) {
 }
 
 void build_max_heap(int a[], int n) {
-    /* TODO */
+    // El último nodo que tiene hijos está en (n/2 - 1)
+    for (int i = n / 2 - 1; i > 0; i--){
+        max_heapify(a,n,i);
+    }
 }
 
 void heap_sort(int a[], int n) {
