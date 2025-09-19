@@ -36,6 +36,12 @@ int main(void) {
     return 0;
 }
 
+void swap(int *a, int *b){
+    int temp = *a;
+    *a =*b;
+    *b=temp;
+}
+
 /*IMPLEMENTAR AQUI*/ 
 void max_heapify(int a[], int n, int i) {
     int largest = i; //Incializamos el mayor como la raiz 
