@@ -20,13 +20,16 @@ void heap_sort(int a[], int n);
 
 /* MAIN de prueba mínima */
 int main(void) {
+    printf("Dame el tamaño de arreglo\n");
     int n; if (scanf("%d", &n) != 1 || n <= 0) return 0;
     int *a = (int*)malloc(sizeof(int) * n);
     if (!a) return 0;
+    printf("Ingrese los numeros del arrreglo con una espacio intermedio:\n");
     for (int i = 0; i < n; ++i) scanf("%d", &a[i]);
 
     heap_sort(a, n);
-
+    
+    printf("Tu arreglo de salida es:\n");
     for (int i = 0; i < n; ++i) {
         if (i) putchar(' ');
         printf("%d", a[i]);
