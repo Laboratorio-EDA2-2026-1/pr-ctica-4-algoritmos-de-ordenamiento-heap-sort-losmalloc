@@ -68,5 +68,15 @@ void build_max_heap(int a[], int n) {
 }
 
 void heap_sort(int a[], int n) {
-    /* TODO */
+    
+    for (int i = n-1; i>0; i--){
+        max_heapify(a, n, i);
+     }
+
+     for(int int i=n-1; i>0; i--){
+        swap(&a[0], &a[i]);
+
+        max_heapify(a,i,0);
+     }
+    }
 }
