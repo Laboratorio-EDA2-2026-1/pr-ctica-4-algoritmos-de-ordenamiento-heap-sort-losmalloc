@@ -34,7 +34,7 @@ void max_heapify(int a[], inr n, int i) {
         a[largest] temp;
 
         //Recursivamente aplicamos max_heapify
-        mx_heapify(a, n, largest);
+        max_heapify(a, n, largest);
     }
 }
 
