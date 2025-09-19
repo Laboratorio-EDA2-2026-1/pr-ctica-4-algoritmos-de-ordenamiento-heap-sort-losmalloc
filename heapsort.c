@@ -30,15 +30,14 @@ int main(void) {
         if (i) putchar(' ');
         printf("%d", a[i]);
     }
-    putchar('
-');
+    putchar('\n');
 
     free(a);
     return 0;
 }
 
 /*IMPLEMENTAR AQUI*/ 
-void max_heapify(int a[], inr n, int i) {
+void max_heapify(int a[], int n, int i) {
     int largest = i; //Incializamos el mayor como la raiz 
     int left = 2 * i +1; // Hijo izquierdo 
     int right = 2 + i +2; //Hijo derecho
@@ -51,7 +50,7 @@ void max_heapify(int a[], inr n, int i) {
     if (largest != i) {
         int temp = a[i];
         a[i] = a[largest];
-        a[largest] temp;
+        a[largest]=temp;
 
         //Recursivamente aplicamos max_heapify
         max_heapify(a, n, largest);
@@ -71,7 +70,7 @@ void heap_sort(int a[], int n) {
         max_heapify(a, n, i);
      }
 
-     for(int int i=n-1; i>0; i--){
+     for(int i=n-1; i>0; i--){
         swap(&a[0], &a[i]);
 
         max_heapify(a,i,0);
