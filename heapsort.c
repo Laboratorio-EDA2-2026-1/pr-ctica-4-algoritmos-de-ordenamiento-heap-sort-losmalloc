@@ -81,7 +81,7 @@ void heap_sort(int a[], int n) {
      }
 
      for(int i=n-1; i>0; i--){
-        (&a[0], &a[i]);
+        swap(&a[0], &a[i]);
 
         max_heapify(a,i,0);
      }
