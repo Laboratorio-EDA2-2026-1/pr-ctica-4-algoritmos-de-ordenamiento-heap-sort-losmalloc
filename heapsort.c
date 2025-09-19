@@ -50,7 +50,7 @@ void swap(int *a, int *b){
 void max_heapify(int a[], int n, int i) {
     int largest = i; //Incializamos el mayor como la raiz 
     int left = 2 * i +1; // Hijo izquierdo 
-    int right = 2 + i +2; //Hijo derecho
+    int right = 2 * i +2; //Hijo derecho
 
     //Si el hijo izquierdo es mas grande que la raíz
     if(left < n && a[left] > a[largest])
